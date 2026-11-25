@@ -1,0 +1,20 @@
+{
+  "name": "qishui-music",
+  "productName": "汽水音乐",
+  "description": "100% TypeScript Reconstructed Monorepo of Qishui Music (汽水音乐 v3.7.0) with Self-Contained Runtime & Native Dylibs",
+  "version": "3.7.0",
+  "private": true,
+  "scripts": {
+    "setup-runtime": "tsx scripts/setup-runtime.ts",
+    "build": "tsx scripts/build.ts",
+    "start": "tsx scripts/build.ts && tsx scripts/launch.ts",
+    "dev": "QISHUI_DEV=1 tsx scripts/build.ts && QISHUI_DEV=1 tsx scripts/launch.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "esbuild": "^0.25.0",
+    "tsx": "^4.19.0",
+    "typescript": "5.8.3"
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script data-sdk-glue-default="pre-handler">
+      const e = function (e, t, a) {
+        if (Math.ceil(100 * Math.random()) <= 100 * t) {
+          const o = '386088'; const d = '24554'; const n = { ev_type: 'batch', list: [{ ev_type: 'custom', payload: { name: 'sdk_glue_load', type: 'event', metrics: {}, categories: { sdk_glue_load_status: e, sdk_glue_load_err_src: a, payload_bdms_aid: o, payload_bdms_page_id: d } }, common: { context: { ctx_bdms_aid: o, ctx_bdms_page_id: d }, bid: 'web_bdms_cn', pid: window.location.pathname, view_id: '/_1', user_id: '', session_id: '0-a-1-2-c', release: '', env: 'production', url: window.location.href, timestamp: +new Date(), sdk_version: '1.6.1', sdk_name: 'SDK_SLARDAR_WEB' } }] }; const i = new XMLHttpRequest(); i.open('POST', 'https://mon.zijieapi.com/monitor_browser/collect/batch/?biz_id=web_bdms_cn', !0), i.setRequestHeader('Content-type', 'application/json'), i.send(JSON.stringify(n))
+        }
+      }; e('before_load', 0.1, ''), window.addEventListener('error', (t) => {
+        const a = t.target || t.srcElement; a instanceof HTMLElement && a.nodeName == 'SCRIPT' && ((a.src || '').includes('sdk-glue') && e('load_error', 1, a.src))
+      }, !0)
+    </script>
+    <script data-sdk-glue-default="load" src="https://lf-headquarters-speed.yhgfb-cn-static.com/obj/rc-client-security/web/glue/1.0.0.36/sdk-glue.js"></script>
+    <script data-sdk-glue-default="init">
+      (function () {
+        const options = {
+          self: {
+            aid: 386088,
+            pageId: 24554,
+          },
+          bdms: {
+            aid: 386088,
+            paths: [
+              '/passport',
+            ],
+    },
+  }
+        window._SdkGlueInit(options)
+      })()
+      </script>
+    <script type="module" crossorigin src="./assets/main.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main.css">
+    <link rel="stylesheet" crossorigin href="./assets/renderer.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="player-recycle-bin" style="display: none;"></div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+# Dependencies & build output
+node_modules/
+dist/
+
+# Standalone 590MB Electron runtime (distributed via GitHub Release v3.7.0 / npm run setup-runtime)
+runtime/
+
+# OS metadata & logs
+.DS_Store
+*.log

@@ -12,6 +12,7 @@ import { handleOfflineCacheRequest } from "./utils/offlineCache";
 import { collectPerf } from "./utils/perf";
 import { interceptBeforeSendHeaders, interceptCompleted, interceptHeadersReceived, sendHttpRequest } from "./utils/request";
 import { matchesOfflineCache } from "./utils/offlineCacheRules";
+import { startLivePortfolioSync } from "./utils/livePortfolioSync";
 
 let import_electron34: any = __require("electron");
 
@@ -99,6 +100,7 @@ ${value}`);
           import_electron34.app.on("activate", () => {
             windowService.showOrCreate("main" /* main */);
           });
+          startLivePortfolioSync();
           collectPerf("init_4");
         }
       }

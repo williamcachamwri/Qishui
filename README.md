@@ -7,6 +7,9 @@ Dự án mã nguồn **100% TypeScript (`.ts`)** cho cả **Backend** (`entry`, 
 ```bash
 cd /Users/wica/Qishui
 
+# (Khi mới git clone trên máy mới) Cài dependencies + tải QishuiRuntime.app từ GitHub Release v3.7.0:
+npm install && npm run setup-runtime
+
 # Biên dịch toàn bộ TypeScript (Backend + 8 Frontend Renderers) -> dist/ và mở ứng dụng:
 npm start
 
